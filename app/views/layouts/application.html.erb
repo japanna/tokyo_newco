@@ -10,20 +10,10 @@
     <![endif]-->
 </head>
 <body>
-  <header class="navbar navbar-fixed-top">
-    <div class="container">
-      <%= link_to "NewCo", '#', id: "logo" %>
-      <nav>
-        <ul class="nav navbar-nav pull-right">
-          <li><%= link_to "Home",   '#' %></li>
-          <li><%= link_to "About",   '#' %></li>
-          <li><%= link_to "Log in", '#' %></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+	<%= render 'layouts/header' %>
   <div class="container">
     <%= yield %>
+    <%= render 'layouts/footer' %>
   </div>
 </body>
 </html>
