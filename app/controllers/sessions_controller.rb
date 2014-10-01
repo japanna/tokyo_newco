@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
 			else
   			forget(user)
 			end
-      redirect_to user
+      redirect_back_or user
     else
       # Create an error message.
       flash.now[:danger] = 'Please check your email and password combination'
