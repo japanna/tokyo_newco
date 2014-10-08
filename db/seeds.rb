@@ -11,6 +11,7 @@ User.create!(name:  "Example User",
              password:              "foobar",
              password_confirmation: "foobar",
              admin: true,
+             store: true,
              activated: true,
              activated_at: Time.zone.now)
 
