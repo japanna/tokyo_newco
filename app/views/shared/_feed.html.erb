@@ -1,5 +1,6 @@
 <% if @feed_items.any? %>
   <ol class="microposts">
+  	<!-- defers the rendering of posts to the micropost partial defined in _micropost.html.erb -->
     <%= render @feed_items %>
   </ol>
   <%= will_paginate @feed_items %>

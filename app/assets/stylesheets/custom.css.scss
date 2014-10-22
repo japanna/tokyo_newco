@@ -11,6 +11,15 @@ $gray-medium-light: #eaeaea;
   box-sizing:         border-box;
 }
 
+/* * {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+} */
+
+
+
+
 /* universal */
 
 html {
@@ -19,6 +28,11 @@ html {
 
 body {
   padding-top: 60px;
+  font-family: 'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
+}
+
+header {
+  background-color: white;
 }
 
 section {
@@ -43,19 +57,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3.5em;
   letter-spacing: -2px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.7em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-align: center;
   font-weight: normal;
-  color: $gray-light;
+  color: #aaa;
 }
 
 p {
@@ -64,13 +78,14 @@ p {
 }
 
 
+
 /* header */
 
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: black;
+  color: gray;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -91,6 +106,7 @@ footer {
     color: $gray;
     &:hover {
       color: $gray-darker;
+    text-decoration: none;
     }
   }
   small {
@@ -121,6 +137,7 @@ footer {
 aside {
   section.user_info {
     margin-top: 20px;
+    /*a {color: gray;} */
   }
   section {
     padding: 10px 0;
@@ -136,6 +153,12 @@ aside {
     }
     h1 {
       font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+    h2 {
       text-align: left;
       letter-spacing: -1px;
       margin-bottom: 3px;
@@ -193,15 +216,28 @@ aside {
 
 /* forms */
 
+form {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+  text-align: center; 
+  width: 60%;
+}
+
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
+  border: 1px solid #ddd;
+  padding: 12px;
   width: 100%;
-  margin-bottom: 15px;
+  
+  margin-bottom: 10px;
   @include box_sizing;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
 }
 
 input {
-  height: auto !important;
+ /*  height: auto !important; */
 }
 
 #error_explanation {
@@ -220,12 +256,24 @@ input {
 }
 
 .checkbox {
-  margin-top: -10px;
-  margin-bottom: 10px;
+color: #aaa;
+text-align: left;
+  margin-top: -5px;
+  margin-bottom: 15px;
   span {
     margin-left: 20px;
     font-weight: normal;
   }
+}
+
+.more {
+  color: #aaa;
+  font-size: 13px;
+  margin-top: 20px;
+  text-align: center;
+    p {
+    margin-bottom: 0px;
+    }
 }
 
 #session_remember_me {
@@ -251,7 +299,7 @@ input {
   list-style: none;
   padding: 0;
   li {
-    padding: 10px 0;
+    padding: 40px 0;
     border-top: 1px solid #e8e8e8;
   }
   .user {
@@ -291,3 +339,51 @@ span.picture {
     border: 0;
   }
 }
+
+.btn-test, .btn-test:hover {
+  font-weight: bold;
+font-family: open-sans, helvetica, ariel, sans-serif;
+text-transform: uppercase;
+text-decoration: none;
+line-height: 160%;
+padding: 5px 40px 5px 40px;
+display: block;
+margin-top: 15px;
+background-color: #000;
+color: #fff;
+box-shadow: none;
+}
+
+.jumbotron {
+  h1 {
+    font-size: 55px;
+  }
+  h2 {
+    color: #aaa;
+    font-size: 30px;
+  }
+  background-color: #fff;
+  padding-top: 0px;
+
+  h3 {
+    color: #aaa;
+    padding-top: 0px;
+    font-size: 20px;
+  }
+}
+
+
+a, a:hover {
+  color: #63b9b3;
+}
+
+a, a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+.btn-primary, .btn-primary:hover {
+  background-color: #63b9b3;
+  border-color: #63b9b3;
+}
+

@@ -12,18 +12,17 @@
       </section>
     </aside>
     <div class="col-md-8">
-      <h3>Feed</h3>
+      <!--<h3>Feed</h3>-->
       <%= render 'shared/feed' %>
     </div>
   </div>
 <% else %>
 <div class="center jumbotron">
-  <h1>Welcome to NewCo</h1>
-
-  <h2>
-    look awesome
-  </h2>
-
-  <%= link_to "Get started", signup_path, class: "btn btn-large btn-primary" %>
+  <h1><%= link_to "NewCo", login_path%></h1>
+  <h2>Local. Personal. Shopping.</h2>
+ 
+  <%= link_to image_tag("box.png"), login_path %>
+   <h3>Request looks from shops in your area - and from local style experts.</h3>
+   <h3>Or <%= link_to "be the stylist.", '#'%></h3>
 </div>
 <% end %>

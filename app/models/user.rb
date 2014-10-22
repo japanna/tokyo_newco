@@ -79,10 +79,7 @@ class User < ActiveRecord::Base
     reset_sent_at < 2.hours.ago
   end
 
-  def feed
-    # This is preliminary. See "Following users" for the full implementation.
-    Micropost.where("user_id = ?", id) #ensures that id is properly escaped before SQL query
-  end
+  
 
   # Follows a user.
   def follow(other_user)
